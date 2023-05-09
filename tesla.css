@@ -1,0 +1,455 @@
+@font-face{
+    font-family: Gotham;
+    src: url(./assets/GothamSSm-Medium_Web.woff2);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    
+    height: 100vh;
+    font-family: Gotham;
+    overflow-x:hidden;
+}
+/* scroll snap */
+html {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+.section{
+    height: 100vh;
+    scroll-snap-align: start;
+}
+/* end scroll snap */
+
+.header-a:hover{
+    border:#757575 1 solid;
+    background-color: rgba(204, 203, 203, 0.3);
+    border-radius: 5px;
+    transition: 1s;
+    
+}
+/* header */
+header{
+    width: 100%;
+    height: 46px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    position:fixed;
+    top:0;
+}
+
+header a{
+    text-decoration: none;
+    color:black;
+    font-size: 14px;
+    margin: 0px 8px;
+    padding: 4px 8px;
+}
+
+label{
+    color:black;
+    font-size: 14px;
+    margin: 0px 8px;
+    padding: 4px 8px;
+}
+.tds-icon.tds-icon-logo-wordmark.tds-site-logo-icon {
+    height: 24px;
+    width: 120px;
+    padding: 0px 16px;
+}
+
+.header-logo{
+    padding: 0 0 0 32px;
+}
+/* end header */
+
+
+.section.img a{
+    font-size: 14px;
+    /* padding: 6px 24px 14px 0; */
+    text-align:center; 
+    text-decoration: none;
+    color: black;
+    box-shadow: 0 3px 0 -2px black; 
+}
+
+.section.img a:hover{
+    box-shadow: 0 4px 0 -2px black; 
+}
+
+section h1, p, .a-inventory{
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    align-items:center;  
+    color: black;
+}
+ 
+section h1{
+    padding-top: 100px;
+    font-size: 40px;
+    /* opacity:0; */
+}
+    
+section p{
+    font-size: 17px;
+    /* opacity:0; */
+}
+
+.a-inventory{
+    font-size: 14px;
+    text-decoration: none;
+    border-bottom: 1px black solid; 
+}
+
+/* a.inventory:hover{
+    border-bottom:3px black solid;
+} */
+
+/* text below header end */
+
+section:nth-of-type(1){
+    background-image: url(./assets/Homepage-Model-Y-Global-Desktop.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+
+section:nth-of-type(2){
+    background-image: url(./assets/Homepage-Model-3-Desktop-LHD.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+
+section:nth-of-type(3){
+    background-image: url(./assets/Model-S-homepage-desktop.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+
+section:nth-of-type(4){
+    background-image: url(./assets/Homepage-Model-X-Desktop-LHD.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+
+section:nth-of-type(5){
+    background-image: url(./assets/Solar_Panels.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+
+section:nth-of-type(6){
+    background-image: url(./assets/Homepage-SolarRoof-Desktop-Global.webp);
+    background-position: center;
+    background-size: cover;
+}
+
+section:nth-of-type(7){
+    background-image: url(./assets/dd739764-bcaa-4263-9488-8c73bc9fb046.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+
+
+/* bottom buttons */
+.button, #shop-button{
+    font-family: Gotham;
+    padding: 4px 24px;
+    height: 38px;
+    width: 267px;
+    font-size: 14px;
+    font-weight:lighter;
+    border-radius: 5px;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.button, #shop-button:hover{
+    cursor: pointer;
+}
+
+.left.button{
+    background-color:rgba(23, 26, 32, 0.9);
+    border:0;
+    color: white;
+    animation: fadeInleft 1s .5s ease-out forwards;
+    opacity:0;
+   
+   
+}
+
+.right.button{
+    border:0;
+    animation: fadeInright 1s .5s ease-out;
+    animation: fadeInleft 1s .5s ease-out forwards;
+    opacity:0;
+    
+}
+#bottom-button{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    align-content: space-between;
+    gap: 30px;
+    height: 62%;
+}
+
+#shop-button{
+    background-color: black;
+    color: white;
+    border:0;
+    margin-top: 50px;
+}
+
+
+/* bottom buttons end */
+/* navsection: blur*/
+#open-menu-checkbox{
+    display:none;
+}
+
+nav{
+    position: fixed;
+    right: -250px;
+    top: 0;
+    background-color: white;
+    color: black;
+    width: 250px;
+    height: 100%;
+    transition: right .2s, opacity 2s;
+    opacity:0;
+    padding: 15px;
+    font-family: Gotham;
+    color: #757575;
+    margin-left: 0px;
+
+}
+
+nav label{
+    font-size: 1.5rem;
+    margin-left: 90%;
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+
+#open-menu-checkbox:checked ~ nav {
+    right:0;
+    opacity: 1;
+}
+
+#blur-overlay{
+    position: fixed;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    backdrop-filter: blur(3px);
+    opacity: 0;
+    transition: .3s;
+}
+
+#open-menu-checkbox:checked ~ #blur-overlay{
+    opacity: 1;
+    pointer-events:all;
+}
+/* nav blur end */
+
+/* nav styling */
+
+#checkbox-style{
+    font-family: Gotham;
+    font-weight: lighter;
+    color:#757575;
+    padding-left: 40px;
+} 
+
+
+li a{
+    text-decoration: none;
+    color:#393c41;
+    font: 14px;
+    /* margin-bottom: 20px; */
+    font-weight: lighter;
+    /* gap: 20px;    */
+}
+
+ul{
+    padding: 4px 32px 48px;
+
+}
+
+#nav-list a{
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;
+    align-items:center;
+    margin-bottom: 20px;
+
+}
+.svg{
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    margin-bottom: 10%;
+}
+/* animations */
+.arrow{
+    width:20px;
+    height: 20px;
+    animation: bounce 1.6s 1s infinite ease-in-out forwards;
+    /* opacity: 0; */
+}
+/* how to make this appear on the screen when loading? */
+.section.img h1{
+    animation: fadeIn 1s ease-out forwards;
+    opacity: 0;
+}
+
+.section.img a{
+    animation: fadeIn 1s .5s ease-out forwards;
+    opacity: 0;
+}
+.mobile-menu{
+    display: none;
+}
+/* keyframes */
+@keyframes bounce{
+    0%{
+        transform:translateY(0);
+    }
+    30%{
+        transform:translateY(20px);
+    }
+    50%{
+        transform:translateY(0);
+    }
+    65%{
+        transform:translateY(10px);
+    }
+    100% {
+        transform:translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInleft{
+    0%{
+        opacity:0;
+        transform: translateX(-50px);
+    }
+    100%{
+        opacity: 1;
+        trtransform: translateX(0px);
+    }
+}
+
+@keyframes fadeInright{
+    0%{
+        opacity:0;
+        transform: translateX(50px);
+    }
+    100%{
+        opacity: 1;
+        trtransform: translateX(0px);
+    }
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1190px){
+    .header-a{
+        display:none;
+    }
+    #menu-label{
+        background-color: rgba(0,0,0,0.1);
+        padding: 10px 15px;
+        border-radius: 4px;
+    }
+    .mobile-menu{
+        display: inline-block;
+    }
+}
+
+@media screen and (max-width: 598px) {
+    #bottom-button{
+        display:flex;
+        gap: 20px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        height: 70%;
+    }
+    .left.button, .right.button{
+        width: 100%;
+        height: 10%;
+        padding: 5px;
+    }
+    section:nth-of-type(1){
+        background-image: url(./firstmobile.jpeg);
+        background-position: 50% 30%;
+        background-size: cover;
+    }
+    
+    section:nth-of-type(2){
+        background-image: url(./assets/model-3-mobile.jpeg);
+        background-position: 50% 30%;
+        background-size: cover;
+    }
+    
+    section:nth-of-type(3){
+        background-image: url(./assets/Model-S-mobile.jpeg);
+       background-position: 50% 30%;
+        background-size: cover;
+    }
+    
+    section:nth-of-type(4){
+        background-image: url(./assets/modelx-mobile.jpeg);
+       background-position: 50% 30%;
+        background-size: cover;
+    }
+    
+    section:nth-of-type(5){
+        background-image: url(./assets/Solar_Panels.jpeg);
+       background-position: 50% 30%;
+        background-size: cover;
+    }
+    
+    section:nth-of-type(6){
+        background-image: url(./assets/Homepage-SolarRoof-Mobile.webp);
+       background-position: 50% 30%;
+        background-size: cover;
+    }
+    
+    section:nth-of-type(7){
+        background-image: url(./assets/bottom-mobile.webp);
+       background-position: 50% 30%;
+        background-size: cover;
+    }
+}
+
+
+
+    
+

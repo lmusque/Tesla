@@ -1,0 +1,221 @@
+@font-face{
+    font-family: Gotham;
+    src: url(./assets/GothamSSm-Medium_Web.woff2);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    
+    height: 100vh;
+    font-family: Gotham;
+}
+/* scroll snap */
+html {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+.section{
+    height: 100vh;
+    scroll-snap-align: start;
+}
+/* end scroll snap */
+/* header */
+header{
+    width: 100%;
+    height: 46px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    position:fixed;
+    top:0;
+}
+
+header a{
+    text-decoration: none;
+    color:black;
+    font-size: 14px;
+    margin: 0px 8px;
+    padding: 4px 8px;
+}
+
+label{
+    color:black;
+    font-size: 14px;
+    margin: 0px 8px;
+    padding: 4px 8px;
+}
+.tds-icon.tds-icon-logo-wordmark.tds-site-logo-icon {
+    height: 24px;
+    width: 120px;
+    padding: 0px 16px;
+}
+
+.header-logo{
+    padding: 0 0 0 32px;
+}
+/* end header */
+
+/* text below header start */
+section h1{
+    width: 100%;
+    font-size: 40px;
+    margin: 69px 6px 0 0;
+    padding: 0 24px;
+    text-align: center;
+    padding-top: 70px;
+}
+
+section p{
+    width: 100%;
+    font-size: 17px;
+    padding: 6px 24px 14px 0;
+    text-align: center;
+}
+
+.a-inventory{
+    width: 100%;
+    font-size: 14px;
+    padding: 6px 24px 14px 0;
+    /* padding-left: px;
+    margin-bottom: 2px solid black; */
+    padding-left: 562px;
+    /* text-align:center; */
+    color:black;  
+}
+
+/* text below header end */
+
+section:nth-of-type(1){
+    background-image: url(./assets/Homepage-Model-Y-Global-Desktop.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+
+section:nth-of-type(2){
+    background-image: url(./assets/Homepage-Model-3-Desktop-LHD.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+
+section:nth-of-type(3){
+    background-image: url(./assets/Model-S-homepage-desktop.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+
+section:nth-of-type(4){
+    background-image: url(./assets/Homepage-Model-X-Desktop-LHD.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+
+section:nth-of-type(5){
+    background-image: url(./assets/Solar_Panels.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+
+section:nth-of-type(6){
+    background-image: url(./assets/Homepage-SolarRoof-Desktop-Global.webp);
+    background-position: center;
+    background-size: cover;
+}
+
+section:nth-of-type(7){
+    background-image: url(./assets/dd739764-bcaa-4263-9488-8c73bc9fb046.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+
+/* navsection: blur*/
+#open-menu-checkbox{
+    display:none;
+}
+
+nav{
+    position: fixed;
+    right: -250px;
+    top: 0;
+    background-color: white;
+    color: black;
+    width: 250px;
+    height: 100%;
+    transition: right .2s, opacity 2s;
+    opacity:0;
+    padding: 10px;
+    font-family: Gotham;
+    color: #757575;
+    /* display:flex;
+    flex-direction:column;
+    align-content:space-around; */
+}
+
+nav label{
+    font-size: 1.5rem;
+    margin-left: 90%;
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+#open-menu-checkbox:checked ~ nav {
+    right:0;
+    opacity: 1;
+}
+
+#blur-overlay{
+    position: fixed;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    backdrop-filter: blur(3px);
+    opacity: 0;
+    transition: .3s;
+}
+
+#open-menu-checkbox:checked ~ #blur-overlay{
+    opacity: 1;
+    pointer-events:all;
+}
+/* nav blur end */
+
+/* nav styling */
+
+/* #checkbox-style{
+    font-family: Gotham;
+    font-weight: lighter;
+    color:#757575;
+/* } 
+/* why wont this work?? */
+
+li a{
+    text-decoration: none;
+    color:#393c41;
+    font: 14px;
+    margin-bottom: -20px;
+    font-weight: lighter;
+}
+li a:hover{
+
+}
+#nav-list{
+    width: 100px;
+    background-color: purple;
+}
+ul{
+    padding: 4px 32px 48px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    
+}
+
+
